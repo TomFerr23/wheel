@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRAL STAKE BONUS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VIRAL STAKE BONUS</h1>
+    </header>
+    <section class="hero">
+
+            <!-- DECOR BALLS SECTION -->
+            <div class="decor decor1 fall"></div>
+            <div class="decor decor2 fall"></div>
+            <div class="decor decor3 fall"></div>
+            <div class="decor decor4 fall"></div>
+
+    <!-- TITLE SECTION -->
+    <div class="title">
+        <div class="container">
+            <div class="circle-text">Do you want to Get the <span>Best Bonuses</span> to Play on <span>Stake?</span></div>
+        </div>
+    </div>
+
+    <!-- TIMER SECTION -->
+    <div class="timer-section">
+        <div class="timer-holder">
+            <div class="image-container"></div>
+            <div class="image-container"></div>
+            <div class="image-container"></div>
+        </div>
+    </div>
+
+
+    
+    <!-- WHEEL SECTION -->
+    <div class="wheel-section">
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="power-controls">
+                                <img class="spin_button" id="spin_button" src="assets/spin-button.png" alt="Spin">
+                            </div>
+                        </td>
+                        <td class="wheel-container" align="center" valign="center">
+                            <canvas id="canvas" width="40" height="40" style="z-index: 999999;"></canvas>
+                            <img class="pointer" id="prizePointer" src="assets/pointer.png" alt="V">
+                            <div class="the_wheel" style="background-image: url('assets/inner-group-rotate.png');"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- POP-UP SECTION -->
+    <div id="popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button id="closePopup" class="close-button">X</button>
+                <h2>CONGRATULATIONS! <br> YOU WON!</h2>
+                <h2>100% DEPOSIT BONUS on <br> BITSTARZ</h2>
+                <p>Deposit and start winning big in the best <br> crypto casino in the world!</p>
+                <button class="action-button">Get your BONUS on Stake Now!</button>
+            </div>
+            <div class="popup-comments">
+                <div class="comments">
+                    <div class="comments-title">Comments</div>
+                    <div class="comments-wrapper">
+                        <div class="comments-nav">
+                            <div class="item">Like</div>
+                            <div class="item">Comment</div>
+                            <div class="item">Share</div>
+                        </div>
+                        <div class="comments-content">
+                            <div class="item">
+                                <div class="avatar"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- SOUND EFFECTS SECTION -->
+    <audio id="spinSound" src="assets/spinner-sound.mp3"></audio>
+    <audio id="rewardSound" src="assets/reward.mp3"></audio>
+    
+
+
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

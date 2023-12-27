@@ -1,0 +1,354 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #0cb3eb;
+    color: #FBC757;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.hero {
+    background-image: url('assets/Stake-Banners-BG-1920x1080 1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+
+
+.decor {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+
+.decor1 {
+    background-image: url('assets/ball-one.png');
+    left: 10%;
+    top: 0%;
+    transform: translateY(-50px);
+}
+
+.decor2 {
+    background-image: url('assets/ball-two.png');
+    left: 25%;
+    top: 0%;
+    transform: translateY(-350px);
+}
+
+.decor3 {
+    background-image: url('assets/ball-three.png');
+    left: 50%;
+    top: 0%;
+    transform: translateY(250px);
+}
+
+.decor4 {
+    background-image: url('assets/ball-four.png');
+    left: 75%;
+    top: 0%;
+    transform: translateY(100px);
+}
+
+@keyframes fall {
+    0% { top: -150px; } /* Start just above the viewport */
+    100% { top: 100vh; } /* End at the bottom of the viewport */
+}
+
+.fall {
+    animation: fall 5s linear infinite;
+}
+
+
+
+
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+}
+
+.title .container {
+    border-radius: 50px;
+    background-color: rgb(1, 2, 31);
+    border: 1px solid #FBC757;
+}
+
+.title .container span {
+    color: #FBC757;
+}
+
+.circle-text {
+    font-size: 32px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #f1f1f1; /* Change color as desired */
+    text-align: center;
+    padding: 20px;
+}
+
+.timer-section {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.timer-holder {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.image-container {
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Bluish gradient */
+    color: white;
+    text-align: center;
+    font-size: 30px; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px;
+    flex-grow: 1; /* Equal width */
+}
+
+
+
+
+.wheel-section div[align="center"] {
+    /* Styles for the centered content */
+}
+
+/* .the_wheel {
+    width: 600px; 
+    height: 600px; 
+    background-size: cover; 
+}
+
+.wheel-section {
+    padding: 124px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel-container {
+    position: relative;
+    width: 600px; 
+    height: 600px; 
+}
+
+
+
+.static-crown {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 670px; 
+    height: 670px; 
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+} */
+
+
+.wheel-section {
+    padding: 124px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.the_wheel {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/inner-group-rotate.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pointer {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    width: 67px;
+    height: 67px;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    cursor: pointer;
+}
+
+.power-controls {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20; /* Ensure it's above the wheel */
+}
+
+.spin_button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, 20%);
+}
+
+
+/* POP-UP SECTION */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999;
+}
+
+.popup-header h2:nth-child(2) {
+    color: #111111; 
+    font-size: 32px;
+}
+
+.popup-header h2:nth-child(3) {
+    color: red;
+    font-size: 32px;
+}
+
+
+.popup-header h2, p, button {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.popup-content {
+    background: #e3f5ff;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FBC757;
+}
+
+.popup-header .action-button {
+    background: #57CDFF;
+    color: #111111;
+    height: 64px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.close-button {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.popup-comments {
+    margin-top: 20px;
+    background: #f0f2f5; /* Facebook comment section color */
+    border: 1px solid #ccd0d5;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.comment {
+    background: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    /* Additional styles to make it look like Facebook comments */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add additional specific styles if needed */
+
+
+/* Additional styles for .the_wheel if needed */
+
+.static-crown {
+    /* Ensure this div stays on top and does not spin */
+    z-index: 10;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .timer-holder {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
